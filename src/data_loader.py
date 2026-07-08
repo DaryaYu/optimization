@@ -1,7 +1,9 @@
+from pathlib import Path
 import pandas as pd
 
 
-DATA_PATH = 'data/Test task (Operations Research Scientist) (1).xlsx'
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+DATA_PATH = PROJECT_ROOT / "data" / "Test task (Operations Research Scientist) (1).xlsx"
 
 
 def load_data(sheet_name: str, data_path=DATA_PATH):
