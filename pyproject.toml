@@ -12,6 +12,7 @@ dependencies = [
     "openpyxl>=3.1.5",
     "ortools>=9.15.6755",
     "pandas>=3.0.3",
+    "pulp[cbc]>=3.3.2",
     "scikit-learn>=1.9.0",
     "scipy>=1.18.0",
     "seaborn>=0.13.2",

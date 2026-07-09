@@ -164,6 +164,18 @@ css = [
 ]
 
 [[package]]
+name = "cbcbox"
+version = "2.929"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6a/9e/c41844f3a746500b88982817233f3f2f4fa6d3a554cedb9222bac9efcbea/cbcbox-2.929-py3-none-macosx_15_0_arm64.whl", hash = "sha256:610fd250f737b19f599d56cca299682a4519472b3ff6a13044502eb71e03931e", size = 59626733, upload-time = "2026-03-23T15:28:20.758Z" },
+    { url = "https://files.pythonhosted.org/packages/3f/08/172af0d618ede8668862ae9c83ffcd929bc966610c1ce357b268edb33645/cbcbox-2.929-py3-none-macosx_15_0_x86_64.whl", hash = "sha256:b369071081176fd55ba9d104c2f2330133c36f0264ebe0215c50a366f290a050", size = 87883726, upload-time = "2026-03-23T15:28:24.874Z" },
+    { url = "https://files.pythonhosted.org/packages/d4/c7/a57493dd959a57dcb8dc31aeef468c0e95d066d4bbf8fc59f9dda3a1fd97/cbcbox-2.929-py3-none-manylinux2014_aarch64.whl", hash = "sha256:62841ab4ed4e1c368bcba8d62c66cd7dd03f3dfaf1ecf4a01c6385a122d1946e", size = 145740150, upload-time = "2026-03-23T15:28:29.617Z" },
+    { url = "https://files.pythonhosted.org/packages/4c/86/502b81d060603e1016a8cb471064e4e65d8009c2feed60ea878b8513a728/cbcbox-2.929-py3-none-manylinux2014_x86_64.whl", hash = "sha256:a57a403cc44fb2af0aa53cb790a7642390f1836a5ff6a7a0b31b30eb6597e3e0", size = 181208771, upload-time = "2026-03-23T15:28:35.544Z" },
+    { url = "https://files.pythonhosted.org/packages/0c/85/2fef9c7c3054ebfb9b0e84fabbeac776a18514b025efa5abd768c889f560/cbcbox-2.929-py3-none-win_amd64.whl", hash = "sha256:0a91420befb965ec1763aab62d7908d3a89a51af845e2a4e05c09d99a67f1151", size = 135305901, upload-time = "2026-03-23T15:28:42.021Z" },
+]
+
+[[package]]
 name = "certifi"
 version = "2026.6.17"
 source = { registry = "https://pypi.org/simple" }
@@ -1321,6 +1333,7 @@ dependencies = [
     { name = "openpyxl" },
     { name = "ortools" },
     { name = "pandas" },
+    { name = "pulp", extra = ["cbc"] },
     { name = "scikit-learn" },
     { name = "scipy" },
     { name = "seaborn" },
@@ -1335,6 +1348,7 @@ requires-dist = [
     { name = "openpyxl", specifier = ">=3.1.5" },
     { name = "ortools", specifier = ">=9.15.6755" },
     { name = "pandas", specifier = ">=3.0.3" },
+    { name = "pulp", extras = ["cbc"], specifier = ">=3.3.2" },
     { name = "scikit-learn", specifier = ">=1.9.0" },
     { name = "scipy", specifier = ">=1.18.0" },
     { name = "seaborn", specifier = ">=0.13.2" },
@@ -1616,6 +1630,20 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/20/e5/16ff212c1e452235a90aeb09066144d0c5a6a8c0834397e03f5224495c4e/ptyprocess-0.7.0.tar.gz", hash = "sha256:5c5d0a3b48ceee0b48485e0c26037c0acd7d29765ca3fbb5cb3831d347423220", size = 70762, upload-time = "2020-12-28T15:15:30.155Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/22/a6/858897256d0deac81a172289110f31629fc4cee19b6f01283303e18c8db3/ptyprocess-0.7.0-py2.py3-none-any.whl", hash = "sha256:4b41f3967fce3af57cc7e94b888626c18bf37a083e3651ca8feeb66d492fef35", size = 13993, upload-time = "2020-12-28T15:15:28.35Z" },
+]
+
+[[package]]
+name = "pulp"
+version = "3.3.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/4e/70/69be07a67621ad804d6cf347965eb4e0d7786a97330d99c31d735aaa6c5a/pulp-3.3.2.tar.gz", hash = "sha256:d0904700c207ac11e25e3b1213b70eae1d6fb25faa719d75f3f15054901258c0", size = 16305346, upload-time = "2026-05-25T09:41:26.207Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/dd/6e/d674f1dde91c71e2ac19e5e5cf1ee6d5845e3aefecd9c39ed9c4b0c9a696/pulp-3.3.2-py3-none-any.whl", hash = "sha256:631b166f72086971a9597f7a0233ababa99bb8d50a01cd543f7758be5a9f86c0", size = 16391742, upload-time = "2026-05-25T09:41:22.2Z" },
+]
+
+[package.optional-dependencies]
+cbc = [
+    { name = "cbcbox" },
 ]
 
 [[package]]
